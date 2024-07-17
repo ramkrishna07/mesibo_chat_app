@@ -51,7 +51,7 @@ async function createMesiboUser(userId, userName) {
                 address: userId,
                 name: userName,
                 token: {
-                    appid: 'com.mesibo.chatapp',
+                    appid: 'com.mesibo.chatapp',   // Replace with your Mesibo App Name
                     expiry: 525600
                 }
             }
@@ -87,7 +87,7 @@ app.post('/register', async (req, res) => {
     }
 });
 
-// Create a super admin user manually (one-time setup)
+// Create a super admin user manually (you can use postman tool to create a super admin) (one-time setup)
 app.post('/create-superadmin', async (req, res) => {
     const { firstName, lastName, email, password } = req.body;
     
